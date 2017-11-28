@@ -1,13 +1,13 @@
 public class Book{
-
+    
     //----------Fields-------------
     private String author, title, ISBN;
 
     //--------Constructors---------
     public Book(){}
-    public Book(String aut, String tit, String ISBN){
-	author = aut;
-	title = tit;
+    public Book(String author, String title, String ISBN){
+	this.author = author;
+	this.title = title;
 	this.ISBN = ISBN;
     }
 

@@ -21,6 +21,7 @@ public abstract class LibraryBook
     public abstract void checkout(String patron, String due);
     public abstract void returned();
     public abstract String circulationStatus();
+    
     public int compareTo(Book other){
 	if (this.getCallNumber() - other.getCallNumber() < 0){
 	    return -1;
@@ -32,4 +33,9 @@ public abstract class LibraryBook
 	    return 1;
 	}
     }
+    
+    public String toString(){
+    	return getTitle() + "," + getAuthor() + "," + getISBN() + "," + circulationStatus() + "," + getCallNumber();
+    }
+    
 }

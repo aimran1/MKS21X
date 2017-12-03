@@ -31,7 +31,7 @@ public abstract class LibraryBook
   }
   
   public String toString(){
-    return super.toString() + "," + getCallNumber();
+    return super.toString() + " , " + getCallNumber();
   }
   
 }

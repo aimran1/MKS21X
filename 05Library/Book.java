@@ -12,6 +12,7 @@ public class Book{
     }
 
     //---------Getters and Setters-----------
+
     public String getAuthor(){
 	return author;
     }
@@ -21,7 +22,20 @@ public class Book{
     public String getISBN(){
 	return ISBN;
     }
+
+    
+    public void setAuthor(String s){
+	author = s;
+    }
+    public void setTitle(String s){
+	title = s;
+    }
+    public void setISBN(String s){
+	ISBN = s;
+    }
+
+    
     public String toString(){
-	return title + "," + author + "," + ISBN; 
+	return this.getTitle() + " , " + this.getAuthor() + " , " + this.getISBN(); 
     }
 }

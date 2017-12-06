@@ -57,6 +57,9 @@ public class Barcode implements Comparable<Barcode>{
   }
 
   //--------------Other Methods-----------------
+
+
+  //-----------CheckSum Helper Method-------------
   public static int checkSum(String zip){
     int sum = 0;
     for (int i = 0; i < 5; i++){
@@ -65,6 +68,8 @@ public class Barcode implements Comparable<Barcode>{
     return sum % 10;
   }
 
+
+
   public static String toCode(String zip){
     String code = "|";
     for (int i = 0; i < 5; i++){
@@ -72,6 +77,8 @@ public class Barcode implements Comparable<Barcode>{
     }
     return code + bar[checkSum(zip)] + "|";
   }
+
+
 
   public static String toZip(String code){
 
@@ -91,10 +98,12 @@ public class Barcode implements Comparable<Barcode>{
       }
     }
 
+    //----------------Fields------------------
     String nums = "";
     code = code.substring(1,31);
     boolean valid = false;
 
+    //-------------Check for valid numbers--------------
     for (int i = 0; i < 30;){
       for (int j = 0; j < bar.length; j++){
         if (bar[j].equals(code.substring(i,i+5))){
@@ -108,11 +117,14 @@ public class Barcode implements Comparable<Barcode>{
       i += 5;
     }
 
+    //---------------Check for checkSum Exception--------------------
     if (nums.charAt(5) != checkSum(nums.substring(0,5))){
       throw new IllegalArgumentException();
     }
 
+    //-------------Return the Zip----------------
     return nums.substring(0,5);
+
   }
 
 

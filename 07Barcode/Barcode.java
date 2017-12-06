@@ -127,6 +127,19 @@ public class Barcode implements Comparable<Barcode>{
 
   }
 
+}
+
+
+
+
+
+
+
+
+
+
+
+
 
   //  public static void main(String[] args){
 
@@ -183,4 +196,3 @@ public class Barcode implements Comparable<Barcode>{
     // System.out.println(Barcode.toZip("|::::::::||::|:|:|::|:|:|:::||:|")); //Invalid character sequence, should throw IllegalArgumentException
     // System.out.println("CODE THOROUGHLY TESTED");
   //  }
-}

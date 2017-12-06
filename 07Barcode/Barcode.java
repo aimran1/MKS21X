@@ -3,8 +3,10 @@ import java.io.*;
 
 public class Barcode implements Comparable<Barcode>{
 
-  String zip;
-  String nums = "0123456789";
+  private String zip;
+  private String nums = "0123456789";
+  private static String[] bar = {"||:::", ":::||", "::|:|", "::||:",":|::|",
+                  ":|:|:", ":||::", "|:::|", "|::|:", "|:|::"};
 
   //----------Constructors-------------
   public Barcode(String zip){
@@ -19,6 +21,7 @@ public class Barcode implements Comparable<Barcode>{
     this.zip = zip;
   }
 
+  //--------------Overridden Methods--------------
   public int compareTo(Barcode other){
     if (Integer.parseInt(this.getZip()) - Integer.parseInt(other.getZip()) > 0){
       return 1;
@@ -31,8 +34,25 @@ public class Barcode implements Comparable<Barcode>{
     }
   }
 
+  //---------------Getters-----------------
   public String getZip(){
     return zip;
   }
 
+  public String getCode(){
+    return "|" + toCode(zip) + "|";
+  }
+
+  public String toString(){
+    return getCode() + "(" + getZip() + ")";
+  }
+
+  //--------------Other Methods-----------------
+  public static String toCode(String zip){
+    String code = "|";
+    for (int i = 0; i < 5; i++){
+      code += bar[Integer.parseInt(zip.substring(i,i+1))];
+    }
+    return code;
+  }
 }

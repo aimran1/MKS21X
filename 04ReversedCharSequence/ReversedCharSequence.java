@@ -1,10 +1,10 @@
-public class ReverseCharSequence implements CharSequence{
+public class ReversedCharSequence implements CharSequence{
 
   String rev = "";
 
   //------------Main----------------
   public static void main(String[]args){
-    ReverseCharSequence r = new ReverseCharSequence("DOGGO");
+    ReversedCharSequence r = new ReversedCharSequence("DOGGO");
     System.out.println(r);
     System.out.println(r.charAt(2));
     System.out.println(r.length());
@@ -12,7 +12,7 @@ public class ReverseCharSequence implements CharSequence{
   }
 
   // -----------Constructor---------------
-  public ReverseCharSequence(String str){
+  public ReversedCharSequence(String str){
     String newStr;
     for (int i = str.length() - 1; i > -1; i--){
       newStr += str.charAt(i);

@@ -38,6 +38,16 @@ public class Sorts{
     }
   }
 
+  public static void insertionSort(int[] ary){
+    while (!isSorted(ary)){
+      for (int i =0; i < ary.length - 1; i++){
+        if (ary[i] > ary[i+1]){
+          swap(ary,i,i+1);
+        }
+      }
+    }
+  }
+
   private static void swap(int[]ary,int a, int b){
     int c =ary[a];
     ary[a] = ary[b];
@@ -56,7 +66,8 @@ public class Sorts{
    // System.out.println(Arrays.toString(randish));
    // bogoSort(randish);
    System.out.println(Arrays.toString(randish));
-   selectionSort(randish);
+   // selectionSort(randish);
+   insertionSort(randish);
    System.out.println(Arrays.toString(randish));
 
  }

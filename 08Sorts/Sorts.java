@@ -50,21 +50,22 @@ public class Sorts{
   }
 
   public static void insertionSort(int[] ary){
-    while (!isSorted(ary)){
-      for (int i =0; i < ary.length - 1; i++){
-        if (ary[i] > ary[i+1]){
-          swap(ary,i,i+1);
-        }
+    for (int num = 0; num < ary.length; num++){
+      int ind = num;
+      int temp = ary[num];
+      for (int i = num-1; i >= 0 && ary[i] > temp; i--){
+        ary[i+1] = ary[i];
+        ind = i;
       }
+      ary[ind] = temp;
     }
   }
 
-
   // public static void main(String[]artie){
-  //   int[] randish = new int[5];
-  //   for(int i = 0 ; i < randish.length; i++){
-  //     randish[i] =(int)(Math.random()*100);
-  //   }
+  // int[] randish = new int[100000];
+  // for(int i = 0 ; i < randish.length; i++){
+  //   randish[i] =(int)(Math.random()*100);
+  // }
   // int a = 10, b = 20;
   // swap(a,b);
   // System.out.println(a + " " + b );

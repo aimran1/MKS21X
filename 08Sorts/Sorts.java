@@ -61,10 +61,21 @@ public class Sorts{
     }
   }
 
+  public static void bubbleSort(int[] ary){
+    for (int i = 0; i < ary.length; i++ ){
+      for (int j = 1; j < ary.length - i; j++){
+        if (ary[j - 1] > ary[j]){
+          swap(ary,j, j-1);
+        }
+      }
+    }
+  }
+
+
   // public static void main(String[]artie){
-  // int[] randish = new int[100000];
+  // int[] randish = new int[50000];
   // for(int i = 0 ; i < randish.length; i++){
-  //   randish[i] =(int)(Math.random()*100);
+  //  randish[i] =(int)(Math.random()*100);
   // }
   // int a = 10, b = 20;
   // swap(a,b);
@@ -75,6 +86,9 @@ public class Sorts{
   // selectionSort(randish);
   // System.out.println(Arrays.toString(randish));
   // insertionSort(randish);
+  // System.out.println(Arrays.toString(randish));
+  // System.out.println(Arrays.toString(randish));
+  // bubbleSort(randish);
   // System.out.println(Arrays.toString(randish));
   // }
 

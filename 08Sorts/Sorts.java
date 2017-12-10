@@ -71,8 +71,12 @@ public class Sorts{
     }
   }
 
+  //-----------------TESTS-------------------
+  //Time for selectionSort ---> about 1.7 seconds
+  //Time for insertionSort ---> about 0.65 seconds
+  //Time for bubbleSort    ---> about 8 seconds
 
-  // public static void main(String[]artie){
+  // public static void main(String[]args){
   // int[] randish = new int[50000];
   // for(int i = 0 ; i < randish.length; i++){
   //  randish[i] =(int)(Math.random()*100);

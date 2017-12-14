@@ -15,6 +15,7 @@ public class GUI extends JFrame implements ActionListener{
     String s = e.getActionCommand();
     System.out.println(s);
     if (s.equals("Convert")){
+      try {
       if(cf.isSelected()){
         t.setText(CtoF(Double.parseDouble(t.getText())) + "");
       }
@@ -23,6 +24,8 @@ public class GUI extends JFrame implements ActionListener{
       }
       else {
         t.setText("Enter A Number and Select a Conversion");
+      }} catch(NumberFormatException l){
+        t.setText("Enter A Number in NUMERALS form.");
       }
     }
     if (s.equals("Clear")){

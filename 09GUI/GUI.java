@@ -3,9 +3,12 @@ import java.awt.event.*;
 import java.awt.*;
 
 public class GUI extends JFrame implements ActionListener{
+
   private Container pane;
   private JButton b,b2;
-  private JCheckBox cf,fc;
+  private ButtonGroup bg = new ButtonGroup();
+  // private JCheckBox cf,fc;
+  private JRadioButton cf,fc;
   private JTextField t;
 
   public void actionPerformed(ActionEvent e){
@@ -37,9 +40,13 @@ public class GUI extends JFrame implements ActionListener{
     pane.setLayout(new FlowLayout());
     b = new JButton("Convert");
     b2 = new JButton("Clear");
-    cf = new JCheckBox("Celsius to Fahrenheit");
-    fc = new JCheckBox("Fahrenheit to Celsius");
-    t = new JTextField(10);
+    // cf = new JCheckBox("Celsius to Fahrenheit");
+    // fc = new JCheckBox("Fahrenheit to Celsius");
+    cf = new JRadioButton("Celsius to Fahrenheit");
+    fc = new JRadioButton("Fahrenheit to Celsius");
+    bg.add(cf);
+    bg.add(fc);
+    t = new JTextField(20);
 
     b.addActionListener(this);
     b2.addActionListener(this);

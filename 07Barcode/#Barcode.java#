@@ -114,35 +114,16 @@ public class Barcode implements Comparable<Barcode>{
           throw new IllegalArgumentException();
       }
       nums += digit;
-      //System.out.println(nums);
       i += 5;
     }
 
     //---------------Check for checkSum Exception--------------------
-    // if (!(nums.substring(5,6).equals(checkSum(nums.substring(0,5))))){
-    //   System.out.println(!(nums.substring(5,6).equals(checkSum(nums.substring(0,5)))));
-    //   System.out.println(checkSum(nums.substring(0,5)));
-    //   System.out.println(nums.charAt(5));
-    //   throw new IllegalArgumentException();
-    // }
     if (!(code.substring(25,30).equals(bar[checkSum(nums.substring(0,5))]))){
-          throw new IllegalArgumentException();
+      throw new IllegalArgumentException();
     }
 
     //-------------Return the Zip----------------
     return nums.substring(0,5);
-
   }
-
-
-
-public static void main(String[] args){
-    Barcode jerry = new Barcode("36751");
-    Barcode lerry = new Barcode("36749");
-    Barcode serry = new Barcode("36751");
-    Barcode merry = new Barcode("36753");
-    System.out.println(jerry.getCode());
-    System.out.println(toZip("|::||::||::|:::|:|:|::::||::|:||"));
-    System.out.println(toZip(jerry.getCode()));
-   }
+  
 }

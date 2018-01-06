@@ -1,8 +1,5 @@
 import java.util.*;
-<<<<<<< HEAD
 
-=======
->>>>>>> 205378b5ba8b552f0a8f1a0586cc5ce6d92c3ac5
 public class OrderedSuperArray extends SuperArray{
   String[] subData = new String[10];
   /*constructor initializes an empty List*/
@@ -197,14 +194,14 @@ public static boolean equals(OrderedSuperArray s, ArrayList<String> a){
 
 
     public static void main(String[] args){
-	runTest02(0);
-	runTest02(1);
-	runTest02(2);
-	runTest02(3);
-	runTest02(4);
-	runTest02(5);
-	runTest02(6);
-	runTest02(7);	
+  runTest02(0);
+  runTest02(1);
+  runTest02(2);
+  runTest02(3);
+  runTest02(4);
+  runTest02(5);
+  runTest02(6);
+  runTest02(7); 
     }
     
 }

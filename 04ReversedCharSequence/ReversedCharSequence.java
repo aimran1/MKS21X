@@ -3,17 +3,17 @@ public class ReversedCharSequence implements CharSequence{
   String rev = "";
 
   //------------Main----------------
-  public static void main(String[]args){
-    ReversedCharSequence r = new ReversedCharSequence("DOGGO");
-    System.out.println(r);
-    System.out.println(r.charAt(2));
-    System.out.println(r.length());
-    System.out.println(r.substring(0,2));
-  }
+  // public static void main(String[]args){
+  //   ReversedCharSequence r = new ReversedCharSequence("DOGGO");
+  //   System.out.println(r);
+  //   System.out.println(r.charAt(2));
+  //   System.out.println(r.length());
+  //   System.out.println(r.substring(0,2));
+  // }
 
   // -----------Constructor---------------
   public ReversedCharSequence(String str){
-    String newStr;
+    String newStr = "";
     for (int i = str.length() - 1; i > -1; i--){
       newStr += str.charAt(i);
     }       

@@ -1,3 +1,4 @@
+import java.util.*;
 public class SuperArray{
 
   //Variables
@@ -111,7 +112,7 @@ public class SuperArray{
 
   public void add(int index, String str){
     if (index < 0 || index > size()){
-      System.out.println("Index Out of Bounds!");
+	// System.out.println("Index Out of Bounds!");
       return;
       //throw new IndexOutofBoundsError();
     }
